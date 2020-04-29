@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
@@ -40,9 +41,7 @@ public class DroolsTest {
     }
 
     private static void addRules() {
-        for (SupportedMarks mark : SupportedMarks.values()) {
-            workingMemory.insert(mark);
-        }
+        Arrays.stream(SupportedMarks.values()).forEach(mark->workingMemory.insert(mark));
         cars.forEach(car -> workingMemory.insert(car));
         workingMemory.fireAllRules();
     }
