@@ -2,7 +2,7 @@ package cars;
 
 public enum SupportedMarks {
 
-    TOYOTA ( "toyota"), MAZDA ("mazda");
+    TOYOTA("drools.rules.mark.toyota"), MAZDA("drools.rules.mark.mazda");
 
     private String value;
 
