@@ -1,0 +1,17 @@
+import cars.Car;
+
+rule "Toyota"
+when
+    $type: cars.SupportedMarks()
+    car: Car(mark==$type.TOYOTA)
+then
+    car.setPrice(7000);
+end
+
+rule "Mazda"
+when
+    $type: cars.SupportedMarks()
+    car: Car(mark==$type.MAZDA)
+then
+    car.setPrice(6000);
+end
